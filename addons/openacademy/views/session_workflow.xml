@@ -10,8 +10,8 @@
             <field name="name">Set session to Draft</field>
             <field name="model_id" ref="model_openacademy_session"/>
             <field name="code">
-                recs = self.browse(cr, uid, context['active_ids'], context=context)
-                recs.action_draft()
+recs = self.browse(cr, uid, context['active_ids'], context=context)
+recs.action_draft()
             </field>
         </record>
         <record model="workflow.activity" id="draft">
@@ -26,8 +26,8 @@
             <field name="name">Set session to Confirmed</field>
             <field name="model_id" ref="model_openacademy_session"/>
             <field name="code">
-                recs = self.browse(cr, uid, context['active_ids'], context=context)
-                recs.action_confirm()
+recs = self.browse(cr, uid, context['active_ids'], context=context)
+recs.action_confirm()
             </field>
         </record>
         <record model="workflow.activity" id="confirmed">
@@ -41,8 +41,8 @@
             <field name="name">Set session to Done</field>
             <field name="model_id" ref="model_openacademy_session"/>
             <field name="code">
-                recs = self.browse(cr, uid, context['active_ids'], context=context)
-                recs.action_done()
+recs = self.browse(cr, uid, context['active_ids'], context=context)
+recs.action_done()
             </field>
         </record>
         <record model="workflow.activity" id="done">
