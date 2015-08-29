@@ -8,12 +8,12 @@
             <field name="arch" type="xml">
                 <form string="form_view_cheque">
                     <group>
-                        <field name="bank_account"></field>
-                        <field name="cheque_seri"></field>
-                        <field name="issue_date"></field>
+                        <field name="bank_account_id"></field>
+                        <field name="sequence"></field>
+                        <field name="date_issue"></field>
                         <field name="first_page_serial"></field>
                         <field name="pages"></field>
-                        <field name="cheque_detail" readonly="1"></field>
+                        <field name="cheque_detail_id" readonly="1"></field>
                     </group>
                 </form>
             </field>
