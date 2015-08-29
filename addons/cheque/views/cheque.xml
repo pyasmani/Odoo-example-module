@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!--form -->
+        <record id="view_form_cheque" model="ir.ui.view">
+            <field name="name">Cheque Form</field>
+            <field name="model">cheque</field>
+            <field name="arch" type="xml">
+                <form string="form_view_cheque">
+                    <group>
+                        <field name="bank_account"></field>
+                        <field name="cheque_seri"></field>
+                        <field name="issue_date"></field>
+                        <field name="first_page_serial"></field>
+                        <field name="pages"></field>
+                        <field name="cheque_detail" readonly="1"></field>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!--form -->
+        <!--<record id="view_form_cheque" model="ir.ui.view">-->
+            <!--<field name="name">Cheque Detail Form</field>-->
+            <!--<field name="model">cheque_detail</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="form_view_cheque_detail">-->
+                    <!--<group>-->
+                        <!--<field name="cheque_no"></field>-->
+                        <!--<field name="amount"></field>-->
+                        <!--<field name="cheque_date"></field>-->
+                        <!--<field name="ref_no"></field>-->
+                        <!--<field name="status"></field>-->
+                    <!--</group>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+        <!-- Action to open To-do Task list -->
+        <act_window id="action_cheque"
+                    name="Cheque"
+                    res_model="cheque"
+                    view_mode="tree,form"/>
+         <!--Menu item to open To-do Task list-->
+        <menuitem id="menu _cheque"
+                  name="Cheque"
+                  parent="account.menu_finance_configuration"
+                  sequence="10"
+                  action="action_cheque"/>
+    </data>
+</openerp>
